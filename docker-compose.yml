@@ -44,5 +44,5 @@ services:
       db-service:
         condition: service_healthy
     entrypoint: >
-      sh -c "python manage.py migrate && 
+      sh -c "python manage.py migrate python --noinput && 
              python manage.py runserver 0.0.0.0:8080"
